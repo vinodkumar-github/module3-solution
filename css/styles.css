@@ -1,0 +1,239 @@
+/* certain styling rules over entire body to override browser defaults*/
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  border: 3px solid black;
+  padding:0px;
+
+}
+
+/*default navbar class has border of 1px. overrode it with border set to zero*/
+.navbar {
+  border-top: 0px solid black;
+  border-bottom: 3px solid black;
+  border-left: 0px;
+  border-right: 0px;
+}
+/* background colour of heading*/
+.navbar-default  {
+     
+        background-color: rgb(143, 143, 143);
+       
+        border-radius: 0%; 
+        padding:20px 0px 0px 0px;
+      } 
+
+/*Style of words Food, LLC*/
+.navbar-default .navbar-brand {
+        font-family: 'Comic Neue', cursive;
+        margin: -3px 20px 20px 0px;padding: 20px;
+        color:#030303;
+        font-size: 2.5em;
+        font-weight: bolder; 
+    } 
+/*During Focus and Hover - Style of words Food, LLC*/
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover
+{
+        color:#000000;
+        background-color:transparent;
+        font-weight: bolder;
+        -webkit-text-stroke: 1px rgb(0, 0, 0);
+        text-stroke: 1px black ;
+      } 
+
+
+/* styling  of three stripes - also called icon-bar */
+
+.navbar-default .navbar-toggle {
+
+        margin: 0px 20px 20px 0px;
+        padding:15px;
+        border:3px solid black;
+        background-color:#b8b8b8
+    }
+
+    /* focus and hover state styling  of three stripes - also called icon-bar */
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover
+        {background-color:#ffffff} 
+
+
+
+
+
+/* colour of three stripes - also called icon-bar */
+.navbar-default .navbar-toggle .icon-bar
+        {background-color:#000000; 
+        width: 2em } 
+
+
+
+/* styling of nav-bar lists aka chicken, beef ,sauces */
+.navbar-default .navbar-nav>.open>a { 
+        box-sizing:border-box ;
+        color:#1d1d1d;
+        background-color:#ffffff;
+        border: 3px solid black;
+        border: left 1px;
+        border: right 1px;
+        text-align: center;
+        font-weight: bold;
+        font-size: large;
+        }
+
+.nav>li {
+  position: relative;
+  top: -1px;
+}
+
+/* Hover and Focus time styling of nav-bar lists aka chicken, beef ,sauces */
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover   {
+        color:#000;
+        background-color:#e7e7e7;
+    
+        border:5px solid black;
+        border: left 2px;
+        border: right 2px;
+        text-align: center 
+      }
+
+/* Special stylings of nav-bar lists aka chicken, beef ,sauces AS BOOT STRAP DEFAULTS ARE INTERFERING */
+.link_first {
+        margin-top: -7px;
+        border-top: 2px solid black;
+}
+.link_last {
+ 
+        border-bottom: 2px solid black;
+}
+
+/* Default behaviour of navbar-right class is to keep nav bar lists as a line
+ and go into toggle button when width goes below small device breakpoint 
+ As we need only toggle button but no navigation items at higher widths
+  I simple made a media query and asked to not display entire class if
+  width falls below 768px*/
+
+
+@media (min-width:767px) { 
+        .navbar-right {
+                display: none;
+                    } 
+                }
+
+/* This too is a rule declaration to override bootstrap's
+ default which is an unwanted behaviour in our case. This particular rule just adjusts
+ navbar-collapse's default behaviour which otherwise creates a border and sways 
+ the output from assignments's illustration */
+@media (max-width:766px) {
+      .navbar-collapse  {
+          margin-bottom:-6px; 
+          background-color: white; 
+          border-top: 0px;
+            } 
+          }
+
+/*From here starts all - other  body elements which are not nav-  styling*/
+/* Another bootstrap default of forcing an overflow unnecesarily is overriden by this rule below */
+
+/*I just kept  page Header "Our Menu" in jumbotron class just to explore more about this class
+I didnt directly keep page-header class in jubotron but rather created a container 
+to ensure no unwanted behaviour from jumbotron class shall persist in output
+Neverthless, i overrode  jumbotron default paddings and background colour here */
+.jumbotron {
+          background-color: transparent;
+          padding: 0px 0px 0px 0px;
+}
+/* here i overrode container class defaults - which i kept as a sub element of jumbotron */
+
+.jumbotron .container {
+          padding: 0px ;
+}
+/* Kept page heading in center. Overrode border defaults and default padding*/
+.jumbotron .container .page-header {
+         
+          border-bottom: none;
+          padding: 0px ;
+}
+
+/* Declared the page heading font and overrode default paddings and margins - optional */
+
+.page-header h1 {
+          font-family: 'Itim', cursive;
+          padding: 0px;
+          margin: 0px;
+} 
+
+
+/* From here I kept content section of the page using bootstrap grid system 
+Bootstrap Grid system needs a row class declaration for width styling 
+and with in it column classes for various device sizes */
+
+/*Overrode default row margin. Kept it at 10 left and 10 right and 0 for bottom and top
+Rationale is... Main container has a padding of 10 and background colour none
+If Row isnt defined to have a right and left margin of 10px the first element left end spacing 
+and last element's right end spacing will remain 10 while spacing between any two elements
+in a row shall be 10 plus 10 i.e 20. while i could use padding for row, this will create a
+problem of spacing once again as grid system will try to divide */
+/*totalwidth - 20 px <10px padding from both ends of the row if i styled row with padding> now
+as total width changes during responsive design tests - this will cause value of space between
+elements and space between left side of first element and view port's left border to be different
+after an hour of expermimenting with padding to get same dumb result, i understood why margin only worked */
+
+.row {
+  margin: 0px 10px 0px 10px 
+
+}
+
+/* each column grid has default padding of 15px in bootstrap. this is to revert that value to zero*/
+.overrides {
+  padding: 0;
+
+}
+
+/* to ensure distance between elements to remain 20px*/
+.mainbox { 
+  
+  box-sizing: border-box;
+  padding:10px
+ 
+
+}
+/*all the styling of objects with in each black border box*/
+section {
+  font-family:'Comic Neue','EB Garamond','Cormorant Garamond', serif;
+  border: 3px solid black;
+  background-color: lightgrey;
+  padding: 5px;
+  text-align: center;
+}
+/*style ruling to keep section heading of each section to remain at center*/
+
+/*This over rides certain section rules like font and make the large lorep ipsum blah blah to
+be in ints own style like spacing of text from black border of each box, font type, colour, size
+etc */
+
+.textstyle {
+  font-family: 'Itim','EB Garamond', serif, Helvetica, sans-serif;
+  color: #000000;
+  font-size:larger;
+  text-align: justify;  
+  padding: 20px;
+}
+
+p span {
+  font-family: serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: black;
+  
+}
+
+section a, section a:hover {
+  font-family:'Comic Neue','EB Garamond','Cormorant Garamond', serif;
+  font-size:x-large;
+  font-weight: bold;
+  color: black;
+}
