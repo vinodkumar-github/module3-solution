@@ -13,8 +13,10 @@ Github id: vinodkumar-github
 
 
 To see the assignment's instruction or stipulations visit 
+
 https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/assignments/assignment2/Assignment-2.md
 
 
 My solution <this repository> for the above assignment was published using github pages. For that, visit
+
 https://vinodkumar-github.github.io/module3-solution/#top
