@@ -5,7 +5,9 @@ I am still a beginner in this. There are many areas where this code can be simpl
 This is  Particularly valid with regard to the styles.css file in css folder.
 
 Ciao!
+
 Vinod Kumar S
+
 Github id: vinodkumar-github
 
 
