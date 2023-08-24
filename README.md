@@ -8,4 +8,8 @@ signed by Vinod. Github id: vinodkumar-github
 
 
 to see published version of this assignment 
-visit github pages url https://vinodkumar-github.github.io/module3-solution/#top
+visit github pages url https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/assignments/assignment2/Assignment-2.md
+to see what was assignment's instruction 
+and for what i submitted:
+
+https://vinodkumar-github.github.io/module3-solution/#top
